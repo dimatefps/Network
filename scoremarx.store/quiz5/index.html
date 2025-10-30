@@ -133,6 +133,20 @@
     left: 100%;
   }
 
+  .final-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    animation: pulse 2s infinite ease-in-out;
+  }
+
+  @keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 0, 150, 0.4); }
+    70% { transform: scale(1.05); box-shadow: 0 0 0 20px rgba(255, 0, 150, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 0, 150, 0); }
+  }
+
   footer {
     position: absolute;
     bottom: 15px;
@@ -189,7 +203,6 @@
       <div class="option" onclick="nextStep(3)">😑 Compro na revista</div>
       <div class="option" onclick="nextStep(3)">😢 Só acho maquiagem cara</div>
       <div class="option" onclick="nextStep(3)">🤔 Já ouvi falar, mas não sei como</div>
-      <div class="option" onclick="nextStep(3)">💡 Tenho curiosidade</div>
     </div>
   </div>
 
@@ -286,6 +299,7 @@
   function finishQuiz() {
     const container = document.querySelector('.quiz-container');
     container.innerHTML = `
+      <img class="final-img" src="https://yt3.ggpht.com/H_MXByVhNyDtzazgP4ldpGWmN9R2tO7atv0hb_aEZ9_uLcMr8qy1ZScXXrHvKTlwDUy5Kc-5jA=s48-c-k-c0x00ffffff-no-rj" alt="Logo">
       <h2>🎯 Parabéns! Seu perfil foi analisado com sucesso.</h2>
       <p style="font-size:1.1em; margin-bottom:25px;">
         Com base nas suas respostas, você tem alto potencial para lucrar revendendo cosméticos e viver 100% desse negócio!
