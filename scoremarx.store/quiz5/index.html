@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz - Viver de Cosméticos</title>
+<style>
+  * {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 1s ease-in-out;
+  }
+
+  .quiz-container {
+    width: 90%;
+    max-width: 500px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    overflow: hidden;
+    text-align: center;
+    animation: fadeIn 1s ease;
+  }
+
+  @keyframes fadeIn {
+    from {opacity: 0; transform: scale(0.9);}
+    to {opacity: 1; transform: scale(1);}
+  }
+
+  .quiz-step {
+    display: none;
+    padding: 30px 20px;
+  }
+
+  .quiz-step.active {
+    display: block;
+    animation: fadeIn 0.8s ease;
+  }
+
+  h2 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  .options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .option {
+    background: linear-gradient(135deg, #ffb347, #ffcc33);
+    color: #333;
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+  }
+
+  .option:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #ff6a00, #ee0979);
+    color: white;
+  }
+
+  .btn {
+    background: #ff4081;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 15px;
+    width: 100%;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .btn:hover {
+    background: #e91e63;
+  }
+
+  footer {
+    margin-top: 20px;
+    font-size: 0.8em;
+    color: #777;
+  }
+
+  @media(max-width: 600px) {
+    .quiz-container {
+      width: 95%;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="quiz-container">
+  <!-- Step 1 -->
+  <div class="quiz-step active" id="step1">
+    <h2>💄 Você está pronta para descobrir o segredo de como viver da revenda de cosméticos?</h2>
+    <div class="options">
+      <div class="option" onclick="nextStep(2)">✨ Estou pronta!</div>
+      <div class="option" onclick="nextStep(2)">💪 Quero aprender mais!</div>
+      <div class="option" onclick="nextStep(2)">😍 Claro que sim!</div>
+      <div class="option" onclick="nextStep(2)">🤩 Vamos nessa!</div>
+    </div>
+    <footer>(c) 2026 - Criado via inlead.digital | Central de anúncios</footer>
+  </div>
+
+  <!-- Step 2 -->
+  <div class="quiz-step" id="step2">
+    <h2>🛍️ Você sabe como comprar maquiagem direto da fábrica?</h2>
+    <div class="options">
+      <div class="option" onclick="nextStep(3)">😩 Não, e tá difícil de conseguir</div>
+      <div class="option" onclick="nextStep(3)">😑 Compro na revista</div>
+      <div class="option" onclick="nextStep(3)">😢 Só acho maquiagem cara</div>
+      <div class="option" onclick="nextStep(3)">🤔 Já ouvi falar, mas não sei como</div>
+      <div class="option" onclick="nextStep(3)">💡 Tenho curiosidade</div>
+    </div>
+    <footer>(c) 2025 - Criado via inlead.digital | Central de anúncios</footer>
+  </div>
+
+  <!-- Step 3 -->
+  <div class="quiz-step" id="step3">
+    <h2>💰 O que mais te impede de começar a empreender com cosméticos?</h2>
+    <div class="options">
+      <div class="option" onclick="nextStep(4)">💸 Falta de capital</div>
+      <div class="option" onclick="nextStep(4)">📚 Falta de conhecimento</div>
+      <div class="option" onclick="nextStep(4)">⏰ Falta de tempo</div>
+      <div class="option" onclick="nextStep(4)">🤔 Não sei por onde começar</div>
+    </div>
+    <footer>(c) 2025 - Criado via inlead.digital | Central de anúncios</footer>
+  </div>
+
+  <!-- Step 4 -->
+  <div class="quiz-step" id="step4">
+    <h2>🚀 Você sente que está perdendo oportunidades por não iniciar seu negócio?</h2>
+    <div class="options">
+      <div class="option" onclick="finishQuiz()">😩 Sim, mas não sei por onde começar</div>
+      <div class="option" onclick="finishQuiz()">💪 Quero mudar isso agora!</div>
+      <div class="option" onclick="finishQuiz()">🤷‍♀️ Ainda estou em dúvida</div>
+      <div class="option" onclick="finishQuiz()">🤩 Quero começar o quanto antes!</div>
+    </div>
+    <footer>(c) 2025 - Criado via inlead.digital | Central de anúncios</footer>
+  </div>
+</div>
+
+<script>
+  let currentStep = 1;
+  function nextStep(step) {
+    document.getElementById(`step${currentStep}`).classList.remove('active');
+    document.getElementById(`step${step}`).classList.add('active');
+    currentStep = step;
+    // muda cor do fundo a cada etapa
+    const colors = [
+      "linear-gradient(135deg, #ff9a9e, #fad0c4)",
+      "linear-gradient(135deg, #a1c4fd, #c2e9fb)",
+      "linear-gradient(135deg, #fbc2eb, #a6c1ee)",
+      "linear-gradient(135deg, #f6d365, #fda085)"
+    ];
+    document.body.style.background = colors[step - 1];
+  }
+
+  function finishQuiz() {
+    // animação antes de redirecionar
+    document.querySelector('.quiz-container').innerHTML = `
+      <h2>🔍 Analisando suas respostas...</h2>
+      <p style="font-size:1.2em;">99% concluído<br><br>Aguarde um momento...</p>
+    `;
+    setTimeout(() => {
+      window.location.href = "https://www.youtube.com/@franklimgui";
+    }, 3000);
+  }
+</script>
+
+</body>
+</html>

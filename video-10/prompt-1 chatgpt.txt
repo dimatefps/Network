@@ -1,0 +1,3 @@
+modele esse quiz que vou te passar a copy. quero que seja um quiz de 4 steps, aonde quando a pessoa marcau ma opcao ja vai pra proxima, quero a pagina inteiro com bastante animacoes e responsiva para mobile, bem colorida e quero que tenha um emoji em cada uma das respostas. cada step varie de 4 a 8 opcoes de resposta. me mande o codigo para o arquivo html. o link do meu checkout no final é: https://www.youtube.com/@franklimgui
+
+copy do cara:

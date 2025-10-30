@@ -1,0 +1,1 @@
+a responsividade para mobile nao ficou boa, dixe o quiz (o texto e as opcoes no centro da tela, nao no topo
