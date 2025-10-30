@@ -1,0 +1,5 @@
+Faca uma pagina de vendas (em index.html) para meu site, quero uma pagina de fundo escuro, bonita, responsiva para mobile, moderna e com muitas animacoes, na parte de video coloque esse video: https://www.youtube.com/watch?v=U77dPcDwZ9w&pp=ygULZnJhbmtsaW1ndWk%3D
+
+as principais cores do meu produto sao vermelho e preto.
+
+script a ser seguido na pagina:
