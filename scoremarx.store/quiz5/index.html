@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Quiz das Mamães Soninho 😴</title>
+<title>Quiz das Mamães Soninho 😴 | Sonho de Bebê</title>
 <style>
     * {
         box-sizing: border-box;
@@ -20,6 +20,7 @@
         align-items: center;
         height: 100vh;
         overflow: hidden;
+        flex-direction: column;
     }
 
     .quiz-container {
@@ -31,6 +32,19 @@
         padding: 30px;
         text-align: center;
         animation: fadeIn 1s ease;
+        position: relative;
+    }
+
+    .logo {
+        width: 120px;
+        height: auto;
+        margin-bottom: 15px;
+        animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-8px); }
     }
 
     h2 {
@@ -98,16 +112,33 @@
         transform: scale(1.1);
     }
 
+    /* Rodapé */
+    footer {
+        text-align: center;
+        font-size: 0.9rem;
+        color: #555;
+        margin-top: 15px;
+        animation: fadeIn 1s ease;
+    }
+
+    footer span {
+        color: #ff5b9f;
+        font-weight: bold;
+    }
+
     /* Responsivo */
     @media (max-width: 480px) {
         .quiz-container {
             padding: 20px;
         }
         h2 {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
         }
         .option {
-            font-size: 0.95rem;
+            font-size: 0.9rem;
+        }
+        .logo {
+            width: 100px;
         }
     }
 </style>
@@ -115,6 +146,8 @@
 <body>
 
 <div class="quiz-container" id="quiz">
+    <img src="https://img.freepik.com/vetores-premium/vetor-de-design-de-logotipo-de-mae-e-bebe-para-maternidade-com-conceito-de-elemento-criativo_427060-3095.jpg" alt="Logo Sonho de Bebê" class="logo">
+
     <div class="step" id="step1">
         <h2>👶 Quando seu bebê costuma ter mais dificuldade para dormir?</h2>
         <div class="options">
@@ -154,6 +187,10 @@
     </div>
 </div>
 
+<footer>
+    © <span>Sonho de Bebê</span> — Todos os direitos reservados.
+</footer>
+
 <script>
     function nextStep(step) {
         document.querySelectorAll('.step').forEach(s => s.classList.add('hidden'));
@@ -163,7 +200,7 @@
     }
 
     function finalAction() {
-        // Aqui você pode redirecionar para o vídeo
+        // Redireciona para o vídeo (substitua pelo seu link)
         window.location.href = "https://seulink.com/video-maternidade"; 
     }
 </script>

@@ -1,0 +1,1 @@
+ o rodapé de copyright nao precisa ficar fixo, deixe na parte inferior do site, mas que tenha que rolar para ve-lo
