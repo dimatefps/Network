@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oferta Exclusiva | Seu Produto</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #0d0d0d;
+      color: #fff;
+      overflow-x: hidden;
+    }
+    header {
+      text-align: center;
+      padding: 50px 20px;
+      background: linear-gradient(90deg, #000, #220000);
+    }
+    h1 {
+      font-size: 2.5rem;
+      color: #ff1a1a;
+      margin-bottom: 20px;
+    }
+    .timer {
+      font-size: 1.5rem;
+      background: #ff1a1a;
+      padding: 10px 20px;
+      display: inline-block;
+      border-radius: 10px;
+      animation: pulse 1.5s infinite;
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 10px #ff1a1a; }
+      50% { box-shadow: 0 0 25px #ff1a1a; }
+      100% { box-shadow: 0 0 10px #ff1a1a; }
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    iframe {
+      width: 100%;
+      height: 315px;
+      border: none;
+      border-radius: 10px;
+    }
+
+    .oferta-card {
+      background: #111;
+      border: 2px solid #ff1a1a;
+      border-radius: 15px;
+      padding: 30px;
+      text-align: center;
+      margin-top: 40px;
+      box-shadow: 0 0 20px #ff1a1a33;
+    }
+    .oferta-card h2 {
+      color: #ff1a1a;
+      margin-bottom: 15px;
+    }
+    .oferta-card button {
+      background: #ff1a1a;
+      border: none;
+      color: #fff;
+      font-size: 1.2rem;
+      padding: 15px 25px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .oferta-card button:hover {
+      background: #cc0000;
+      transform: scale(1.05);
+    }
+
+    .feedbacks img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 10px;
+      margin: 10px;
+    }
+    .faq {
+      background: #1a1a1a;
+      border-radius: 10px;
+      padding: 20px;
+    }
+    .faq details {
+      margin-bottom: 10px;
+    }
+    .faq summary {
+      cursor: pointer;
+      color: #ff1a1a;
+      font-weight: bold;
+    }
+    .btn-scroll {
+      display: block;
+      text-align: center;
+      margin: 50px auto;
+      background: transparent;
+      border: 2px solid #ff1a1a;
+      color: #ff1a1a;
+      padding: 15px 25px;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .btn-scroll:hover {
+      background: #ff1a1a;
+      color: #fff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #000;
+      color: #888;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 2rem; }
+      iframe { height: 200px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header data-aos="fade-down">
+    <h1>🔥 Oferta Exclusiva do Seu Produto 🔥</h1>
+    <div class="timer">Essa oferta expira em: <span id="countdown">06:39:13</span></div>
+  </header>
+
+  <section data-aos="fade-up">
+    <h2>Veja o que você vai conquistar</h2>
+    <iframe src="https://www.youtube.com/embed/U77dPcDwZ9w" allowfullscreen></iframe>
+  </section>
+
+  <section data-aos="fade-right">
+    <h2>A dor que você sente...</h2>
+    <p>Você já tentou de tudo, mas ainda sente que não chegou lá. Frustração, tempo perdido e resultados que não aparecem.  
+    Nosso produto é a solução definitiva — criado para resolver *exatamente* esse problema.</p>
+  </section>
+
+  <section data-aos="fade-left">
+    <h2>O que você vai receber</h2>
+    <p>Um pacote completo de aprendizado e performance, com conteúdos práticos e comprovados.</p>
+    <iframe src="https://www.youtube.com/embed/U77dPcDwZ9w" allowfullscreen></iframe>
+  </section>
+
+  <section id="oferta" class="oferta-card" data-aos="zoom-in">
+    <h2>Garanta agora sua vaga com desconto exclusivo!</h2>
+    <p><strong>De R$497 por apenas R$197</strong></p>
+    <button>Quero garantir minha oferta agora!</button>
+  </section>
+
+  <section class="feedbacks" data-aos="fade-up">
+    <h2>O que nossos clientes dizem</h2>
+    <div style="display:flex; flex-wrap:wrap; justify-content:center;">
+      <img src="https://via.placeholder.com/300x200.png?text=Feedback+1" alt="Feedback 1">
+      <img src="https://via.placeholder.com/300x200.png?text=Feedback+2" alt="Feedback 2">
+      <img src="https://via.placeholder.com/300x200.png?text=Feedback+3" alt="Feedback 3">
+    </div>
+  </section>
+
+  <section data-aos="flip-up">
+    <h2>Garantia Incondicional</h2>
+    <p>Você tem 7 dias para testar. Se não ficar satisfeito, devolvemos 100% do seu dinheiro.</p>
+  </section>
+
+  <section class="faq" data-aos="fade-up">
+    <h2>Perguntas Frequentes</h2>
+    <details>
+      <summary>Como recebo o produto?</summary>
+      <p>Logo após a compra, você receberá o acesso por e-mail.</p>
+    </details>
+    <details>
+      <summary>Posso pedir reembolso?</summary>
+      <p>Sim! Garantia total de 7 dias.</p>
+    </details>
+    <details>
+      <summary>Funciona para iniciantes?</summary>
+      <p>Sim! Nosso método é passo a passo, pensado para todos os níveis.</p>
+    </details>
+  </section>
+
+  <button class="btn-scroll" onclick="scrollToOferta()">Pensei melhor e agora quero aproveitar a oferta!</button>
+
+  <footer>
+    <p>© 2025 Seu Produto. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+
+    // Timer de urgência
+    function startCountdown(duration) {
+      let timer = duration, hours, minutes, seconds;
+      const display = document.getElementById('countdown');
+      setInterval(() => {
+        hours = parseInt(timer / 3600, 10);
+        minutes = parseInt((timer % 3600) / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+        hours = hours < 10 ? "0" + hours : hours;
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+        display.textContent = hours + ":" + minutes + ":" + seconds;
+        if (--timer < 0) timer = 0;
+      }, 1000);
+    }
+    startCountdown(6 * 3600 + 39 * 60 + 13);
+
+    // Rolagem suave até oferta
+    function scrollToOferta() {
+      document.getElementById("oferta").scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+</body>
+</html>
