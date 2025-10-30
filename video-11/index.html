@@ -3,35 +3,41 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Oferta Exclusiva | Seu Produto</title>
+  <title>Transforme Seu Corpo com o Método Fênix 🔥</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Montserrat', sans-serif;
-      background: #0d0d0d;
+      background: #0b0b0b;
       color: #fff;
       overflow-x: hidden;
     }
+
     header {
       text-align: center;
-      padding: 50px 20px;
-      background: linear-gradient(90deg, #000, #220000);
+      padding: 40px 20px;
+      background: linear-gradient(180deg, #000, #1a0000);
     }
+
     h1 {
-      font-size: 2.5rem;
+      font-size: 2.2rem;
       color: #ff1a1a;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      font-weight: 800;
     }
+
     .timer {
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       background: #ff1a1a;
       padding: 10px 20px;
       display: inline-block;
       border-radius: 10px;
       animation: pulse 1.5s infinite;
     }
+
     @keyframes pulse {
       0% { box-shadow: 0 0 10px #ff1a1a; }
       50% { box-shadow: 0 0 25px #ff1a1a; }
@@ -43,13 +49,30 @@
       max-width: 1100px;
       margin: auto;
     }
-    iframe {
-      width: 100%;
-      height: 315px;
-      border: none;
-      border-radius: 10px;
+
+    h2 {
+      color: #ff1a1a;
+      margin-bottom: 15px;
+      font-size: 1.8rem;
+      text-align: center;
     }
 
+    p {
+      color: #ddd;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 0 20px #ff1a1a55;
+    }
+
+    /* Oferta */
     .oferta-card {
       background: #111;
       border: 2px solid #ff1a1a;
@@ -59,10 +82,12 @@
       margin-top: 40px;
       box-shadow: 0 0 20px #ff1a1a33;
     }
+
     .oferta-card h2 {
       color: #ff1a1a;
       margin-bottom: 15px;
     }
+
     .oferta-card button {
       background: #ff1a1a;
       border: none;
@@ -73,30 +98,42 @@
       cursor: pointer;
       transition: 0.3s;
     }
+
     .oferta-card button:hover {
       background: #cc0000;
       transform: scale(1.05);
     }
 
-    .feedbacks img {
-      width: 100%;
-      max-width: 300px;
-      border-radius: 10px;
-      margin: 10px;
+    /* Feedbacks */
+    .feedbacks {
+      text-align: center;
     }
+
+    .feedbacks img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin: 10px;
+      border: 2px solid #ff1a1a;
+      object-fit: cover;
+    }
+
     .faq {
       background: #1a1a1a;
       border-radius: 10px;
       padding: 20px;
     }
+
     .faq details {
       margin-bottom: 10px;
     }
+
     .faq summary {
       cursor: pointer;
       color: #ff1a1a;
       font-weight: bold;
     }
+
     .btn-scroll {
       display: block;
       text-align: center;
@@ -110,6 +147,7 @@
       cursor: pointer;
       transition: all 0.3s;
     }
+
     .btn-scroll:hover {
       background: #ff1a1a;
       color: #fff;
@@ -124,75 +162,93 @@
     }
 
     @media (max-width: 768px) {
-      h1 { font-size: 2rem; }
-      iframe { height: 200px; }
+      h1 { font-size: 1.7rem; }
+      h2 { font-size: 1.4rem; }
+      iframe { height: 220px; }
+      .oferta-card button { width: 100%; font-size: 1rem; }
+      section { padding: 40px 15px; }
     }
   </style>
 </head>
 <body>
 
   <header data-aos="fade-down">
-    <h1>🔥 Oferta Exclusiva do Seu Produto 🔥</h1>
+    <h1>🔥 Transforme Seu Corpo com o Método Fênix 🔥</h1>
     <div class="timer">Essa oferta expira em: <span id="countdown">06:39:13</span></div>
   </header>
 
   <section data-aos="fade-up">
-    <h2>Veja o que você vai conquistar</h2>
+    <h2>Assista à VSL e descubra o segredo do Método Fênix</h2>
     <iframe src="https://www.youtube.com/embed/U77dPcDwZ9w" allowfullscreen></iframe>
   </section>
 
   <section data-aos="fade-right">
-    <h2>A dor que você sente...</h2>
-    <p>Você já tentou de tudo, mas ainda sente que não chegou lá. Frustração, tempo perdido e resultados que não aparecem.  
-    Nosso produto é a solução definitiva — criado para resolver *exatamente* esse problema.</p>
+    <h2>O Mecanismo Único: O Ciclo Fênix</h2>
+    <p>Depois de anos de tentativas frustradas, criamos um método que **ativa o metabolismo de forma contínua**,  
+    quebrando o “ciclo da desistência” e reprogramando o corpo para queimar gordura naturalmente.  
+    Chamamos isso de <strong>Ciclo Fênix</strong> — a fórmula que reativa o seu metabolismo como uma chama que nunca se apaga 🔥.</p>
   </section>
 
   <section data-aos="fade-left">
+    <h2>A dor que você sente...</h2>
+    <p>Você já tentou dietas restritivas, remédios e academias, mas o resultado nunca dura.  
+    O Método Fênix vai direto na causa do problema: o metabolismo desacelerado e o corpo inflamado.  
+    Em poucos dias, você sentirá mais energia, menos inchaço e verá os números da balança caírem naturalmente.</p>
+  </section>
+
+  <section data-aos="fade-up">
     <h2>O que você vai receber</h2>
-    <p>Um pacote completo de aprendizado e performance, com conteúdos práticos e comprovados.</p>
+    <p>✔️ Plano alimentar ajustável  
+    <br>✔️ Treinos inteligentes (sem academia)  
+    <br>✔️ Suporte motivacional diário  
+    <br>✔️ Acesso ao Ciclo Fênix completo</p>
     <iframe src="https://www.youtube.com/embed/U77dPcDwZ9w" allowfullscreen></iframe>
   </section>
 
   <section id="oferta" class="oferta-card" data-aos="zoom-in">
-    <h2>Garanta agora sua vaga com desconto exclusivo!</h2>
+    <h2>Garanta agora o seu acesso ao Método Fênix!</h2>
     <p><strong>De R$497 por apenas R$197</strong></p>
-    <button>Quero garantir minha oferta agora!</button>
+    <a href="https://www.youtube.com/@franklimgui" target="_blank">
+      <button>Quero garantir minha transformação agora!</button>
+    </a>
   </section>
 
   <section class="feedbacks" data-aos="fade-up">
-    <h2>O que nossos clientes dizem</h2>
-    <div style="display:flex; flex-wrap:wrap; justify-content:center;">
-      <img src="https://via.placeholder.com/300x200.png?text=Feedback+1" alt="Feedback 1">
-      <img src="https://via.placeholder.com/300x200.png?text=Feedback+2" alt="Feedback 2">
-      <img src="https://via.placeholder.com/300x200.png?text=Feedback+3" alt="Feedback 3">
+    <h2>Histórias reais de transformação</h2>
+    <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:center;">
+      <img src="https://yt3.googleusercontent.com/H_MXByVhNyDtzazgP4ldpGWmN9R2tO7atv0hb_aEZ9_uLcMr8qy1ZScXXrHvKTlwDUy5Kc-5jA=s160-c-k-c0x00ffffff-no-rj" alt="Feedback 1">
+      <img src="https://yt3.googleusercontent.com/H_MXByVhNyDtzazgP4ldpGWmN9R2tO7atv0hb_aEZ9_uLcMr8qy1ZScXXrHvKTlwDUy5Kc-5jA=s160-c-k-c0x00ffffff-no-rj" alt="Feedback 2">
+      <img src="https://yt3.googleusercontent.com/H_MXByVhNyDtzazgP4ldpGWmN9R2tO7atv0hb_aEZ9_uLcMr8qy1ZScXXrHvKTlwDUy5Kc-5jA=s160-c-k-c0x00ffffff-no-rj" alt="Feedback 3">
     </div>
   </section>
 
   <section data-aos="flip-up">
     <h2>Garantia Incondicional</h2>
-    <p>Você tem 7 dias para testar. Se não ficar satisfeito, devolvemos 100% do seu dinheiro.</p>
+    <p>Você tem 7 dias para testar o Método Fênix.  
+    Se não se sentir mais leve, confiante e no controle do seu corpo, devolvemos 100% do seu dinheiro.  
+    Sem perguntas, sem riscos.</p>
   </section>
 
   <section class="faq" data-aos="fade-up">
     <h2>Perguntas Frequentes</h2>
     <details>
-      <summary>Como recebo o produto?</summary>
-      <p>Logo após a compra, você receberá o acesso por e-mail.</p>
+      <summary>Como recebo o programa?</summary>
+      <p>Após a compra, você recebe acesso imediato por e-mail.</p>
     </details>
     <details>
-      <summary>Posso pedir reembolso?</summary>
-      <p>Sim! Garantia total de 7 dias.</p>
+      <summary>Funciona para qualquer idade?</summary>
+      <p>Sim! O Ciclo Fênix foi projetado para homens e mulheres de todas as idades.</p>
     </details>
     <details>
-      <summary>Funciona para iniciantes?</summary>
-      <p>Sim! Nosso método é passo a passo, pensado para todos os níveis.</p>
+      <summary>Preciso de academia?</summary>
+      <p>Não. Os treinos são simples e podem ser feitos em casa, em poucos minutos por dia.</p>
     </details>
   </section>
 
   <button class="btn-scroll" onclick="scrollToOferta()">Pensei melhor e agora quero aproveitar a oferta!</button>
 
   <footer>
-    <p>© 2025 Seu Produto. Todos os direitos reservados.</p>
+    <p>© 2025 Método Fênix. Todos os direitos reservados.</p>
   </footer>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -216,7 +272,7 @@
     }
     startCountdown(6 * 3600 + 39 * 60 + 13);
 
-    // Rolagem suave até oferta
+    // Rolagem suave
     function scrollToOferta() {
       document.getElementById("oferta").scrollIntoView({ behavior: "smooth" });
     }
