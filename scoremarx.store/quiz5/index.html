@@ -3,313 +3,169 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Quiz - Viver de Cosméticos</title>
+<title>Quiz das Mamães Soninho 😴</title>
 <style>
-  * {
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-  }
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+    }
 
-  body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    overflow: hidden;
-    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background 1s ease-in-out;
-  }
+    body {
+        background: linear-gradient(135deg, #ffb6c1, #ffd6e0, #fff0f5);
+        color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+    }
 
-  .quiz-container {
-    width: 90%;
-    max-width: 480px;
-    height: 90vh;
-    background: white;
-    border-radius: 20px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 25px 20px;
-    text-align: center;
-    animation: fadeIn 1s ease;
-    position: relative;
-  }
-
-  @keyframes fadeIn {
-    from {opacity: 0; transform: scale(0.9);}
-    to {opacity: 1; transform: scale(1);}
-  }
-
-  .quiz-step {
-    display: none;
-    width: 100%;
-  }
-
-  .quiz-step.active {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    animation: fadeIn 0.8s ease;
-  }
-
-  h2 {
-    color: #333;
-    font-size: 1.3em;
-    margin-bottom: 25px;
-  }
-
-  .options {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    width: 100%;
-  }
-
-  .option {
-    background: linear-gradient(135deg, #ffb347, #ffcc33);
-    color: #333;
-    padding: 14px 12px;
-    border-radius: 12px;
-    font-size: 1.05em;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-weight: 600;
-  }
-
-  .option:hover {
-    transform: scale(1.05);
-    background: linear-gradient(135deg, #ff6a00, #ee0979);
-    color: white;
-  }
-
-  /* Botão Futurista Final */
-  .final-button {
-    margin-top: 25px;
-    position: relative;
-    display: inline-block;
-    padding: 15px 40px;
-    font-size: 1.2em;
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    border: none;
-    background: linear-gradient(90deg, #ff0080, #ff8c00, #40e0d0);
-    border-radius: 50px;
-    cursor: pointer;
-    overflow: hidden;
-    transition: 0.4s;
-    box-shadow: 0 0 15px rgba(255, 0, 150, 0.5);
-    animation: glow 2s infinite alternate ease-in-out;
-  }
-
-  @keyframes glow {
-    0% { box-shadow: 0 0 10px #ff00de, 0 0 20px #ff00de; }
-    50% { box-shadow: 0 0 20px #00f0ff, 0 0 40px #00f0ff; }
-    100% { box-shadow: 0 0 10px #ff00de, 0 0 20px #ff00de; }
-  }
-
-  .final-button:hover {
-    transform: scale(1.07);
-    background-position: 200% center;
-  }
-
-  .final-button::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.8), transparent);
-    transition: all 0.6s;
-  }
-
-  .final-button:hover::before {
-    left: 100%;
-  }
-
-  .final-img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin-bottom: 20px;
-    animation: pulse 2s infinite ease-in-out;
-  }
-
-  @keyframes pulse {
-    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 0, 150, 0.4); }
-    70% { transform: scale(1.05); box-shadow: 0 0 0 20px rgba(255, 0, 150, 0); }
-    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 0, 150, 0); }
-  }
-
-  footer {
-    position: absolute;
-    bottom: 15px;
-    text-align: center;
-    font-size: 0.75em;
-    color: #777;
-    width: 100%;
-  }
-
-  @media (max-width: 600px) {
     .quiz-container {
-      width: 95%;
-      height: 90%;
-      padding: 20px;
+        width: 90%;
+        max-width: 500px;
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        padding: 30px;
+        text-align: center;
+        animation: fadeIn 1s ease;
     }
 
     h2 {
-      font-size: 1.15em;
-      margin-bottom: 20px;
+        margin-bottom: 20px;
+        font-size: 1.4rem;
+        color: #ff5b9f;
+    }
+
+    .options {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
     }
 
     .option {
-      font-size: 1em;
-      padding: 12px 10px;
+        background: #ffe3ef;
+        border: none;
+        border-radius: 15px;
+        padding: 12px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
     }
 
-    .final-button {
-      font-size: 1em;
-      padding: 13px 30px;
+    .option:hover {
+        background: #ffb6c1;
+        transform: scale(1.05);
+        color: white;
     }
-  }
+
+    @keyframes fadeIn {
+        from {opacity: 0; transform: translateY(20px);}
+        to {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes buttonGlow {
+        0% { box-shadow: 0 0 5px #ff5b9f; }
+        50% { box-shadow: 0 0 20px #ff5b9f; }
+        100% { box-shadow: 0 0 5px #ff5b9f; }
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    /* Botão final */
+    .final-button {
+        background: linear-gradient(45deg, #ff5b9f, #ff87b3, #ffb6c1);
+        border: none;
+        color: white;
+        font-size: 1.2rem;
+        padding: 15px 25px;
+        border-radius: 30px;
+        cursor: pointer;
+        animation: buttonGlow 2s infinite alternate;
+        transition: transform 0.3s ease;
+        margin-top: 20px;
+    }
+
+    .final-button:hover {
+        transform: scale(1.1);
+    }
+
+    /* Responsivo */
+    @media (max-width: 480px) {
+        .quiz-container {
+            padding: 20px;
+        }
+        h2 {
+            font-size: 1.2rem;
+        }
+        .option {
+            font-size: 0.95rem;
+        }
+    }
 </style>
 </head>
 <body>
 
-<div class="quiz-container">
-
-  <!-- Step 1 -->
-  <div class="quiz-step active" id="step1">
-    <h2>💄 Você está pronta para descobrir o segredo de como viver da revenda de cosméticos?</h2>
-    <div class="options">
-      <div class="option" onclick="nextStep(2)">✨ Estou pronta!</div>
-      <div class="option" onclick="nextStep(2)">💪 Quero aprender mais!</div>
-      <div class="option" onclick="nextStep(2)">😍 Claro que sim!</div>
-      <div class="option" onclick="nextStep(2)">🤩 Vamos nessa!</div>
+<div class="quiz-container" id="quiz">
+    <div class="step" id="step1">
+        <h2>👶 Quando seu bebê costuma ter mais dificuldade para dormir?</h2>
+        <div class="options">
+            <button class="option" onclick="nextStep(2)">🌙 À noite, depois das mamadas</button>
+            <button class="option" onclick="nextStep(2)">☀️ Durante o dia, nas sonecas</button>
+            <button class="option" onclick="nextStep(2)">😩 Praticamente o tempo todo!</button>
+            <button class="option" onclick="nextStep(2)">💤 Depende do dia, não tem padrão</button>
+        </div>
     </div>
-  </div>
 
-  <!-- Step 2 -->
-  <div class="quiz-step" id="step2">
-    <h2>🛍️ Você sabe como comprar maquiagem direto da fábrica?</h2>
-    <div class="options">
-      <div class="option" onclick="nextStep(3)">😩 Não, e tá difícil de conseguir</div>
-      <div class="option" onclick="nextStep(3)">😑 Compro na revista</div>
-      <div class="option" onclick="nextStep(3)">😢 Só acho maquiagem cara</div>
-      <div class="option" onclick="nextStep(3)">🤔 Já ouvi falar, mas não sei como</div>
+    <div class="step hidden" id="step2">
+        <h2>💤 O que você já tentou para fazer seu bebê dormir melhor?</h2>
+        <div class="options">
+            <button class="option" onclick="nextStep(3)">🎶 Colocar música ou barulho branco</button>
+            <button class="option" onclick="nextStep(3)">🍼 Dar mamada extra</button>
+            <button class="option" onclick="nextStep(3)">🚼 Embalar no colo</button>
+            <button class="option" onclick="nextStep(3)">🌙 Rotina do sono (banho, luz baixa, etc)</button>
+            <button class="option" onclick="nextStep(3)">😢 Nada parece funcionar</button>
+        </div>
     </div>
-  </div>
 
-  <!-- Step 3 -->
-  <div class="quiz-step" id="step3">
-    <h2>📦 Os seus fornecedores têm limite de compra mínima?</h2>
-    <div class="options">
-      <div class="option" onclick="nextStep(4)">🥺 Sim, e isso me atrapalha</div>
-      <div class="option" onclick="nextStep(4)">😄 Não, compro livremente</div>
-      <div class="option" onclick="nextStep(4)">🤔 Ainda não sei onde comprar</div>
-      <div class="option" onclick="nextStep(4)">💅 Estou buscando novos fornecedores</div>
+    <div class="step hidden" id="step3">
+        <h2>🧸 Seu bebê costuma acordar quantas vezes por noite?</h2>
+        <div class="options">
+            <button class="option" onclick="nextStep(4)">😴 Nenhuma (raramente)</button>
+            <button class="option" onclick="nextStep(4)">😕 1 a 2 vezes</button>
+            <button class="option" onclick="nextStep(4)">😫 3 a 5 vezes</button>
+            <button class="option" onclick="nextStep(4)">😭 Mais de 5 vezes!</button>
+        </div>
     </div>
-  </div>
 
-  <!-- Step 4 -->
-  <div class="quiz-step" id="step4">
-    <h2>💰 O que mais te impede de começar a empreender com cosméticos?</h2>
-    <div class="options">
-      <div class="option" onclick="nextStep(5)">💸 Falta de capital</div>
-      <div class="option" onclick="nextStep(5)">📚 Falta de conhecimento</div>
-      <div class="option" onclick="nextStep(5)">⏰ Falta de tempo</div>
-      <div class="option" onclick="nextStep(5)">😕 Falta de confiança</div>
+    <div class="step hidden" id="step4">
+        <h2>✨ Última pergunta, mamãe! ✨<br><br>
+        Você gostaria de descobrir o <strong>segredinho simples</strong> que faz bebês dormirem mais rápido (sem choro, sem desespero e sem precisar deixá-lo chorando sozinho)?</h2>
+        
+        <button class="final-button" onclick="finalAction()">💗 QUERO VER O VÍDEO 💗</button>
     </div>
-  </div>
-
-  <!-- Step 5 -->
-  <div class="quiz-step" id="step5">
-    <h2>📊 Quanto você gostaria de ganhar revendendo cosméticos?</h2>
-    <div class="options">
-      <div class="option" onclick="nextStep(6)">💵 Acima de R$ 3.000 por mês</div>
-      <div class="option" onclick="nextStep(6)">💸 Entre R$ 5.000 e R$ 8.000 por mês</div>
-      <div class="option" onclick="nextStep(6)">💰 Acima de R$ 10.000 por mês</div>
-      <div class="option" onclick="nextStep(6)">💎 Quero uma renda extra estável</div>
-    </div>
-  </div>
-
-  <!-- Step 6 -->
-  <div class="quiz-step" id="step6">
-    <h2>👑 Qual é o seu maior objetivo com o seu negócio?</h2>
-    <div class="options">
-      <div class="option" onclick="nextStep(7)">🤩 Ser dona da minha própria loja</div>
-      <div class="option" onclick="nextStep(7)">🥰 Aumentar minha renda</div>
-      <div class="option" onclick="nextStep(7)">💅 Trabalhar com algo que amo</div>
-      <div class="option" onclick="nextStep(7)">🥺 Ainda não pensei sobre isso</div>
-    </div>
-  </div>
-
-  <!-- Step 7 -->
-  <div class="quiz-step" id="step7">
-    <h2>💻 Você tem acesso a um celular ou computador com internet para aprender o método?</h2>
-    <div class="options">
-      <div class="option" onclick="nextStep(8)">📱 Sim, todos os dias</div>
-      <div class="option" onclick="nextStep(8)">💻 Tenho, mas uso pouco</div>
-      <div class="option" onclick="nextStep(8)">📶 Às vezes, mas posso usar quando precisar</div>
-      <div class="option" onclick="nextStep(8)">❌ Não tenho acesso constante</div>
-    </div>
-  </div>
-
-  <!-- Step 8 -->
-  <div class="quiz-step" id="step8">
-    <h2>🚀 Você concorda que com fornecedores e orientação certa é possível ter resultados mais rápidos?</h2>
-    <div class="options">
-      <div class="option" onclick="finishQuiz()">😀 Sim, com certeza!</div>
-      <div class="option" onclick="finishQuiz()">😢 Ainda tenho dúvidas</div>
-      <div class="option" onclick="finishQuiz()">🤔 Quero entender melhor primeiro</div>
-      <div class="option" onclick="finishQuiz()">💪 Concordo totalmente!</div>
-    </div>
-  </div>
-
-  <footer>© 2025 - Criado via inlead.digital | Central de anúncios</footer>
 </div>
 
 <script>
-  let currentStep = 1;
+    function nextStep(step) {
+        document.querySelectorAll('.step').forEach(s => s.classList.add('hidden'));
+        const next = document.getElementById('step' + step);
+        next.classList.remove('hidden');
+        next.style.animation = 'fadeIn 0.8s ease';
+    }
 
-  function nextStep(step) {
-    document.getElementById(`step${currentStep}`).classList.remove('active');
-    document.getElementById(`step${step}`).classList.add('active');
-    currentStep = step;
-
-    const colors = [
-      "linear-gradient(135deg, #ff9a9e, #fad0c4)",
-      "linear-gradient(135deg, #a1c4fd, #c2e9fb)",
-      "linear-gradient(135deg, #fbc2eb, #a6c1ee)",
-      "linear-gradient(135deg, #f6d365, #fda085)",
-      "linear-gradient(135deg, #a18cd1, #fbc2eb)",
-      "linear-gradient(135deg, #ffecd2, #fcb69f)",
-      "linear-gradient(135deg, #89f7fe, #66a6ff)",
-      "linear-gradient(135deg, #fddb92, #d1fdff)"
-    ];
-    document.body.style.background = colors[step - 1];
-  }
-
-  function finishQuiz() {
-    const container = document.querySelector('.quiz-container');
-    container.innerHTML = `
-      <img class="final-img" src="https://yt3.ggpht.com/H_MXByVhNyDtzazgP4ldpGWmN9R2tO7atv0hb_aEZ9_uLcMr8qy1ZScXXrHvKTlwDUy5Kc-5jA=s48-c-k-c0x00ffffff-no-rj" alt="Logo">
-      <h2>🎯 Parabéns! Seu perfil foi analisado com sucesso.</h2>
-      <p style="font-size:1.1em; margin-bottom:25px;">
-        Com base nas suas respostas, você tem alto potencial para lucrar revendendo cosméticos e viver 100% desse negócio!
-      </p>
-      <button class="final-button" onclick="window.location.href='https://www.youtube.com/@franklimgui'">
-        🚀 ACESSAR MEU PLANO AGORA
-      </button>
-      <footer>© 2025 - Criado via inlead.digital | Central de anúncios</footer>
-    `;
-  }
+    function finalAction() {
+        // Aqui você pode redirecionar para o vídeo
+        window.location.href = "https://seulink.com/video-maternidade"; 
+    }
 </script>
 
 </body>

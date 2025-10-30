@@ -1,0 +1,3 @@
+crie um quiz em html. quero que seja um quiz de 4 steps, aonde quando a pessoa marcau ma opcao ja vai pra proxima. quero a pagina inteiro com bastante animacoes e responsiva para mobile, bem colorida e quero que tenha um emoji em cada uma das respostas. cada step varie de minimo 4 a maximo 8 opcoes de resposta. no ultimo step levara para um botao cheio de animacao e moderno com o nome "QUERO VER O VIDEO" quero que aja como um copywriter e faca uma boa copy, como no ultimo step vai levar para um video, arranje a copy desse ultimo step de acordo, despertando curiosidade e etc.
+
+meu nicho é: maternidade (para mamaes que nao conseguem fazer os recem nascidos dormir)
