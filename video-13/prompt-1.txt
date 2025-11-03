@@ -1,0 +1,6 @@
+quero uma pagina de vendas com animacoes, moderna, futurista, responsiva para mobile e com efeitos de backdrop blur do tailwind
+
+quero essa mockup na primeira dobra:
+http://trokajotreinamentos.online/wp-content/uploads/2024/06/planopremium-8.png
+
+esse é o script da pagina atual, que ja converte muito mas está bem feio:
